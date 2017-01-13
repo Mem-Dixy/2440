@@ -16,6 +16,14 @@
 				<p class='description'></p> Thanks for creating a <span class="blue">PHP Starter Application</span>.
 			</td>
 		</tr>
+		<tr>
+			<td>
+				CE 01
+			</td>
+			<td>
+				<a href="exercise/01/HelloWorld.php">Hello World</a>
+			</td>
+		</tr>
 	</table>
 </body>
 </html>
