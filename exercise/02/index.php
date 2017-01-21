@@ -57,16 +57,16 @@ print("</table>");
 $index = rand(0,50);
 $count = rand(51,100);
 while ($index<$count) {
-    $count -= 1;
-    $index += 1;
+	$count -= 1;
+	$index += 1;
 }
 echo "<br />Loop stopped at i=$index and num = $count";
 echo "<br />Year of Birth:<select>";
 $year = date("Y");
 for ($index=0; $index<100; $index+=1) {
-    if ($index>10) {
-        echo "<option>".($year-$index)."</option>";
-    }
+	if ($index>10) {
+		echo "<option>".($year-$index)."</option>";
+	}
 }
 echo "</select>";
 ?>
