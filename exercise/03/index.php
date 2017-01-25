@@ -1,12 +1,27 @@
 <?php
-$name = htmlentities($_POST["name"]);
-$race = htmlentities($_POST["race"]);
-$class = htmlentities($_POST["class"]);
-$age = htmlentities($_POST["age"]);
-$gender = htmlentities($_POST["gender"]);
-$kingdom = htmlentities($_POST["kingdom"]);
-//$image = "".$race."".$class."".$gender."";
-$image = $race.$class.$gender;
+class adventurer {
+	public $name;
+	public $race;
+	public $class;
+	public $age;
+	public $gender;
+	public $kingdom;
+	public function __construct ($moo) {
+		$this->$name = htmlentities($moo["name"]);
+		$this->$race = htmlentities($moo["race"]);
+		$this->$class = htmlentities($moo["class"]);
+		$this->$age = htmlentities($moo["age"]);
+		$this->$gender = htmlentities($moo["gender"]);
+		$this->$kingdom = htmlentities($moo["kingdom"]);
+	}
+	public function __destruct() {
+		print 'contained ';
+	}
+	public function image () {
+		return $this->race.$user->class.$user->gender;
+	}
+}
+$user = new adventurer($_POST);
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,13 +57,13 @@ $image = $race.$class.$gender;
 			<input type="submit" value="Send" />
 		</form>
 		<?php
-			print("name=".$name."<br />");
-			print("race=".$race."<br />");
-			print("class=".$class."<br />");
-			print("age=".$age."<br />");
-			print("gender=".$gender."<br />");
-			print("kingdom=".$kingdom."<br />");
-			print("<img alt=\"image\" src=\"image/".$image.".jpg\" />");
+			print("name=".$user->name."<br />");
+			print("race=".$user->race."<br />");
+			print("class=".$user->class."<br />");
+			print("age=".$user->age."<br />");
+			print("gender=".$user->gender."<br />");
+			print("kingdom=".$user->kingdom."<br />");
+			print("<img alt=\"image\" src=\"image/".$user->image().".jpg\" />");
 		?>
 	</body>
 </html>
