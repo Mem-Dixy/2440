@@ -1,8 +1,10 @@
 <?php require "head.php" ?>
-		<h1>
-			Story Idea Generator
+		<h1 style="text-align:center;">
+			Who Am I?
 		</h1>
-		<form accept-charset="utf-8" action="index.php" autocomplete="on" enctype="text/plain" method="post">
+		<form accept-charset="utf-8" action="WhoYouAre.php" autocomplete="on" enctype="text/plain" method="get">
+		<!--<form accept-charset="utf-8" action="WhoYouAre.php" autocomplete="on" enctype="text/plain" method="post">-->
+		<!--<form action="WhoYouAre.php" method="post">-->
 			<table>
 				<tbody>
 					<tr>
@@ -23,12 +25,13 @@
 					</tr>
 					<tr>
 						<td>
-							Address Line 1<br />
-							Address Line 2<br />
-							
+							Address Line 1
+							<br />
+							Address Line 2
 						</td>
 						<td>
 							<input name="address1" type="text" maxlength="100" />
+							<br />
 							<input name="address2" type="text" maxlength="100" />
 						</td>
 					</tr>
@@ -38,6 +41,7 @@
 						</td>
 						<td>
 							<select name="state">
+								<option label="--Select--"></option>
 								<option label="Alabama" value="AL"></option>
 								<option label="Alaska" value="AK"></option>
 								<option label="Arizona" value="AZ"></option>
@@ -99,15 +103,19 @@
 						</td>
 						<td>
 							<select name="gender">
-								<option label="(Select)"></option>
+								<option label="--Select--"></option>
 								<option label="Female" value="F"></option>
 								<option label="Male" value="M"></option>
+								<option label="Trans" value="T"></option>
 								<option label="Other" value="O"></option>
 							</select>
 						</td>
 					</tr>
+					<tr>
+						<td colspan="2" style="text-align:center;">
+							<input type="submit" value="Submit Form" />
+						</td>
 				</tbody>
 			</table>
-			<input type="submit" value="Submit Forms" />
 		</form>
 <?php require "body.php" ?>
