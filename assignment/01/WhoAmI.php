@@ -1,10 +1,9 @@
 <?php require "head.php" ?>
 		<h1 style="text-align:center;">
-			Who Am I?
+			Who Am I
 		</h1>
+		<!--POST not work. Used GET-->
 		<form accept-charset="utf-8" action="WhoYouAre.php" autocomplete="on" enctype="text/plain" method="get">
-		<!--<form accept-charset="utf-8" action="WhoYouAre.php" autocomplete="on" enctype="text/plain" method="post">-->
-		<!--<form action="WhoYouAre.php" method="post">-->
 			<table>
 				<tbody>
 					<tr>
@@ -25,14 +24,10 @@
 					</tr>
 					<tr>
 						<td>
-							Address Line 1
-							<br />
-							Address Line 2
+							Address
 						</td>
 						<td>
-							<input name="address1" type="text" maxlength="100" />
-							<br />
-							<input name="address2" type="text" maxlength="100" />
+							<input name="address" type="text" maxlength="100" />
 						</td>
 					</tr>
 					<tr>
@@ -41,7 +36,6 @@
 						</td>
 						<td>
 							<select name="state">
-								<option label="--Select--"></option>
 								<option label="Alabama" value="AL"></option>
 								<option label="Alaska" value="AK"></option>
 								<option label="Arizona" value="AZ"></option>
