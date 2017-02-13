@@ -1,27 +1,3 @@
-<?php
-$PATH = "/lock/";
-$SSL_CLIENT_KEY_FILE = "23d8f2a3fab5b6-key.pem";
-$SSL_CLIENT_CERT_FILE = "23d8f2a3fab5b6-cert.pem";
-$CA_CERT_FILE = "cleardb-ca.pem";
-$PATH_TO_SSL_CLIENT_KEY_FILE = $PATH.$SSL_CLIENT_KEY_FILE;
-$PATH_TO_SSL_CLIENT_CERT_FILE = $PATH.$SSL_CLIENT_CERT_FILE;
-$PATH_TO_CA_CERT_FILE = $PATH.$CA_CERT_FILE;
-$db = mysqli_init();
-$db->ssl_set(PATH_TO_SSL_CLIENT_KEY_FILE, PATH_TO_SSL_CLIENT_CERT_FILE, PATH_TO_CA_CERT_FILE, null, null);
-//
-$host="us-cdbr-iron-east-04.cleardb.net";
-$port=3306;
-$socket="";
-$user="bc9b863d027fb5";
-$password="49b5f0b8";
-$dbname="ad_9d2d0deee119756";
-$con = new mysqli($host, $user, $password, $dbname, $port, $socket) or die ('Could not connect to the database server' . mysqli_connect_error());
-$con->close();
-//
-include "head.php";
-include "body.php";
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -30,6 +6,78 @@ include "body.php";
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<a href="assignment/01/WhoAmI.php">Assignment 1</a>
+					</td>
+					<td>
+						<a href="assignment/02/index.html">Assignment 2</a>
+					</td>
+					<td>
+						<a href="assignment/03/index.html">Assignment 3</a>
+					</td>
+					<td>
+						<a href="assignment/04/index.html">E-Commerce</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="exercise/01/index.php">Exercise 01</a>
+					</td>
+					<td>
+						<a href="exercise/02/index.php">Exercise 02</a>
+					</td>
+					<td>
+						<a href="exercise/03/index.php">Exercise 03</a>
+					</td>
+					<td>
+						<a href="exercise/04/index.php">Exercise 04</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="exercise/05/index.php">Exercise 05</a>
+					</td>
+					<td>
+						<a href="exercise/06/index.php">Exercise 06</a>
+					</td>
+					<td>
+						<a href="exercise/07/index.php">Exercise 07</a>
+					</td>
+					<td>
+						<a href="exercise/08/index.php">Exercise 08</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="exercise/09/index.php">Exercise 09</a>
+					</td>
+					<td>
+						<a href="exercise/10/index.php">Exercise 10</a>
+					</td>
+					<td>
+						<a href="exercise/11/index.php">Exercise 11</a>
+					</td>
+					<td>
+						<a href="exercise/12/index.php">Exercise 12</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<a href="exercise/13/index.php">Exercise 13</a>
+					</td>
+					<td>
+						<a href="exercise/14/index.php">Exercise 14</a>
+					</td>
+					<td>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 		<div style="text-align:center;">
 			<img alt="Image of the student." src="images/student.jpg"><br />
 			<h3><a href="http://hellopoetry.com/poem/677401/if-i-were-a-fish/">if I were a fish</a></h3>
@@ -53,5 +101,39 @@ include "body.php";
 			</span>
 			<h4><a href="http://hellopoetry.com/william-worthless-1/">WILLIAM WORTHLESS</a></h4>
 		</div>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						Hobbies
+					</th>
+					<th>
+						Interests
+					</th>
+					<th>
+						Favorite Book
+					</th>
+					<th>
+						Favorite Film
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						Watching paint dry, ice melt, and snails race.
+					</td>
+					<td>
+						Sleeping. Eating. Working. Learning.
+					</td>
+					<td>
+						Php and MySQL Web Development, Fifth Edition
+					</td>
+					<td>
+						<a href="http://www.imdb.com/title/tt0808240/">Turks in Space</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 	</body>
 </html>

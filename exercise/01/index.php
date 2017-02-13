@@ -9,10 +9,13 @@
 	<body>
 		<h3>
 			My First PHP Application
-		</h3><?php
-echo "Hello World";
-$greeting = "PHP is fun!\n";
-echo $greeting;
-?>
+		</h3>
+		<p>
+			<?php echo "Hello World"; ?>
+
+			<br />
+			<?php echo "PHP is fun!"; ?>
+
+		</p>
 	</body>
 </html>

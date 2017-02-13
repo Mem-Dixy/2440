@@ -1,24 +1,27 @@
 <?php
+function money ($key,$array) {
+	return array_key_exists($key, $array) ? htmlentities($array[$key]) : "";
+}
 class adventurer {
 	public $name;
 	public $race;
-	public $class;
+	public $_class;
 	public $age;
 	public $gender;
 	public $kingdom;
 	public function __construct ($moo) {
-		$this->$name = htmlentities($moo["name"]);
-		$this->$race = htmlentities($moo["race"]);
-		$this->$class = htmlentities($moo["class"]);
-		$this->$age = htmlentities($moo["age"]);
-		$this->$gender = htmlentities($moo["gender"]);
-		$this->$kingdom = htmlentities($moo["kingdom"]);
+		$this->name = money("name",$moo);
+		$this->race = money("race",$moo);
+		$this->_class = money("class",$moo);
+		$this->age = money("age",$moo);
+		$this->gender = money("gender",$moo);
+		$this->kingdom = money("kingdom",$moo);
 	}
 	public function __destruct() {
 		print 'contained ';
 	}
 	public function image () {
-		return $this->race.$user->class.$user->gender;
+		return $this->race.$this->_class.$this->gender;
 	}
 }
 $user = new adventurer($_POST);
@@ -59,7 +62,7 @@ $user = new adventurer($_POST);
 		<?php
 			print("name=".$user->name."<br />");
 			print("race=".$user->race."<br />");
-			print("class=".$user->class."<br />");
+			print("class=".$user->_class."<br />");
 			print("age=".$user->age."<br />");
 			print("gender=".$user->gender."<br />");
 			print("kingdom=".$user->kingdom."<br />");
