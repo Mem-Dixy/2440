@@ -1,27 +1,27 @@
 <?php
-function money ($key,$array) {
+function from_array ($key,$array) {
 	return array_key_exists($key, $array) ? htmlentities($array[$key]) : "";
 }
 class adventurer {
 	public $name;
 	public $race;
-	public $_class;
+	public $guild;
 	public $age;
 	public $gender;
 	public $kingdom;
-	public function __construct ($moo) {
-		$this->name = money("name",$moo);
-		$this->race = money("race",$moo);
-		$this->_class = money("class",$moo);
-		$this->age = money("age",$moo);
-		$this->gender = money("gender",$moo);
-		$this->kingdom = money("kingdom",$moo);
+	public function __construct ($array) {
+		$this->name = from_array("name",$array);
+		$this->race = from_array("race",$array);
+		$this->guild = from_array("class",$array);
+		$this->age = from_array("age",$array);
+		$this->gender = from_array("gender",$array);
+		$this->kingdom = from_array("kingdom",$array);
 	}
 	public function __destruct() {
 		print 'contained ';
 	}
 	public function image () {
-		return $this->race.$this->_class.$this->gender;
+		return $this->race.$this->guild.$this->gender;
 	}
 }
 $user = new adventurer($_POST);
@@ -33,7 +33,7 @@ $user = new adventurer($_POST);
 		<title>
 			Class Exercise 03
 		</title>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="../../style.css" />
 	</head>
 	<body>
             <?php print(rand()."<br />"); ?>
@@ -62,7 +62,7 @@ $user = new adventurer($_POST);
 		<?php
 			print("name=".$user->name."<br />");
 			print("race=".$user->race."<br />");
-			print("class=".$user->_class."<br />");
+			print("class=".$user->guild."<br />");
 			print("age=".$user->age."<br />");
 			print("gender=".$user->gender."<br />");
 			print("kingdom=".$user->kingdom."<br />");
