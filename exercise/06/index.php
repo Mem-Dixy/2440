@@ -1,5 +1,5 @@
 <?php
 require "head.php";
-require "mysql.php";
+require "database.php";
 require "body.php";
 ?>

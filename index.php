@@ -24,7 +24,7 @@ $mysqli->close();
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>PHP Starter Application</title>
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="index.css" />
     </head>
     <body>
         <table>
@@ -34,13 +34,13 @@ $mysqli->close();
                         <a href="assignment/01/WhoAmI.php">Assignment 1</a>
                     </td>
                     <td>
-                        <a href="assignment/02/index.html">Assignment 2</a>
+                        <a href="assignment/02/index.php">Assignment 2</a>
                     </td>
                     <td>
-                        <a href="assignment/03/index.html">Assignment 3</a>
+                        <a href="assignment/03/index.php">Assignment 3</a>
                     </td>
                     <td>
-                        <a href="assignment/04/index.html">E-Commerce</a>
+                        <a href="assignment/04/index.php">E-Commerce</a>
                     </td>
                 </tr>
                 <tr>
